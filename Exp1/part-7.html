@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Feedback Survey</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 720px;
+            margin: 40px auto;
+            padding: 0 20px;
+            line-height: 1.6;
+            background: #f8f9fa;
+            color: #222;
+        }
+        h1 {
+            text-align: center;
+            color: #1a3c5e;
+        }
+        #description {
+            text-align: center;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 2.5rem;
+        }
+        form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        label {
+            display: block;
+            margin: 1.4rem 0 0.4rem;
+            font-weight: 500;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.65rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+        .radio-group, .checkbox-group {
+            margin: 1.2rem 0;
+        }
+        .radio-group label, .checkbox-group label {
+            display: flex;
+            align-items: center;
+            margin: 0.5rem 0;
+            font-weight: normal;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 0.7rem;
+        }
+        button {
+            margin-top: 2rem;
+            padding: 0.9rem 2rem;
+            background: #1a3c5e;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #2c5885;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="title">Travel Experience Feedback</h1>
+    <p id="description">
+        Help us improve! Please take a moment to share your recent travel experience with us.
+    </p>
+
+    <form id="survey-form">
+
+        <label id="name-label" for="name">Full Name</label>
+        <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="Enter your full name" 
+            required
+        >
+
+        <label id="email-label" for="email">Email Address</label>
+        <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="you@example.com" 
+            required
+        >
+
+        <label id="number-label" for="number">Age (optional but helpful)</label>
+        <input 
+            type="number" 
+            id="number" 
+            name="age" 
+            min="16" 
+            max="120" 
+            placeholder="Enter your age"
+        >
+
+        <label for="dropdown">Which type of trip was it?</label>
+        <select id="dropdown" name="trip-type" required>
+            <option value="" disabled selected>Select trip type</option>
+            <option value="solo">Solo travel</option>
+            <option value="couple">Couple / Romantic</option>
+            <option value="family">Family vacation</option>
+            <option value="friends">With friends</option>
+            <option value="group">Organized group tour</option>
+        </select>
+
+        <fieldset class="radio-group">
+            <legend>How satisfied were you overall?</legend>
+            
+            <label>
+                <input type="radio" name="satisfaction" value="very-satisfied" required>
+                Very satisfied
+            </label>
+            <label>
+                <input type="radio" name="satisfaction" value="satisfied">
+                Satisfied
+            </label>
+            <label>
+                <input type="radio" name="satisfaction" value="neutral">
+                Neutral
+            </label>
+            <label>
+                <input type="radio" name="satisfaction" value="dissatisfied">
+                Dissatisfied
+            </label>
+        </fieldset>
+
+        <fieldset class="checkbox-group">
+            <legend>What did you like most? (select all that apply)</legend>
+            
+            <label>
+                <input type="checkbox" name="likes" value="destinations">
+                Beautiful destinations
+            </label>
+            <label>
+                <input type="checkbox" name="likes" value="guides">
+                Knowledgeable guides
+            </label>
+            <label>
+                <input type="checkbox" name="likes" value="food">
+                Local food & cuisine
+            </label>
+            <label>
+                <input type="checkbox" name="likes" value="organization">
+                Good organization / timing
+            </label>
+            <label>
+                <input type="checkbox" name="likes" value="price">
+                Value for money
+            </label>
+        </fieldset>
+
+        <label for="comments">Additional comments or suggestions</label>
+        <textarea 
+            id="comments" 
+            name="comments" 
+            rows="5" 
+            placeholder="Anything else you'd like to tell us..."
+        ></textarea>
+
+        <button type="submit" id="submit">Submit Feedback</button>
+
+    </form>
+
+</body>
+</html>
