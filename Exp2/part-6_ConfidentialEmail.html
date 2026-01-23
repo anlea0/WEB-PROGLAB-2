@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Confidential Email</title>
+<style>
+body{
+  font-family:Arial,sans-serif;  background:#f0f0f0;  text-align:center; }
+#email{
+  width:500px;  padding:50px;  margin:50px auto 0;  border:2px solid #ccc;
+  box-sizing:border-box;  background:#fff9e6; /* soft yellow */
+  box-shadow:0 6px 20px rgba(0,0,0,0.15);  border-radius:8px;
+}
+#confidential,#top-secret{
+  display:inline-block;  padding:10px 15px;  margin-left:10px;  border:2px solid;
+  font-weight:bold;  border-radius:6px;  transform:rotate(-10deg);
+  box-shadow:0 3px 6px rgba(0,0,0,0.1);
+}
+#confidential{
+  border-color:#d32f2f;  background:#ffebee;  color:#b71c1c;
+}
+#top-secret{
+  transform:rotate(10deg);  border-color:#1976d2;  background:#e3f2fd;
+  color:#0d47a1;
+}
+.blurred{
+  filter:blur(3px);  background:#fff3e0;  padding:2px 4px;  border-radius:3px;
+}
+p{
+  margin:15px 0;  line-height:1.5;
+}
+</style>
+</head>
+<body>
+
+<main id="email">
+  <div id="confidential">CONFIDENTIAL</div>
+  <div id="top-secret">TOP SECRET</div>
+
+  <p>This is a <span class="blurred">very sensitive</span> email that contains <span class="blurred">critical information</span>.</p>
+  <p>Do not forward this <span class="blurred">email content</span> to unauthorized persons.</p>
+  <p>Ensure all <span class="blurred">attachments</span> and <span class="blurred">links</span> are handled carefully.</p>
+</main>
+
+</body>
+</html>

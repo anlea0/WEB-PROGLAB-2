@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Job Application Form</title>
+<style>
+body{
+  background:#fff9c4; /* light yellow */  font-family:Arial,sans-serif }
+.container{
+  width:350px;background:#fff;
+  margin:80px auto;padding:20px;
+  border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.15) }
+label{display:block;margin-top:10px}
+input,select,textarea{
+  width:100%;padding:6px;margin-top:4px;
+  border:2px solid #ccc;border-radius:4px }
+
+/* focus */
+input:focus,textarea:focus{border-color:#1976d2}
+/* invalid */
+input:invalid,select:invalid,textarea:invalid{border-color:red}
+/* valid */
+input:valid,select:valid,textarea:valid{border-color:green}
+/* radio group */
+.radio-group{margin-top:15px;border:none}
+.radio-group input[type="radio"]{
+  width:auto;margin-right:6px}
+.radio-group input[type="radio"]:checked{
+  box-shadow:0 0 4px #1976d2}
+.radio-group input[type="radio"]:checked + label{
+  color:#1976d2;font-weight:bold}
+/* first input */
+input:first-of-type{border-radius:12px}
+/* button */
+button{
+  width:100%;margin-top:15px;
+  padding:8px;border:none;
+  background:#1976d2;color:#fff;
+  border-radius:4px;cursor:pointer
+}
+button:hover{background:#0d47a1}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <form>
+    <label for="name">Full Name</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" required>
+
+    <label for="position">Position</label>
+    <select id="position" required>
+      <option value="">Select</option>
+      <option>Front-End Developer</option>
+      <option>Back-End Developer</option>
+      <option>AI/ML Engineer</option>
+    </select>
+
+    <fieldset class="radio-group">
+      <legend>Availability</legend>
+      <input type="radio" id="full" name="availability">
+      <label for="full">Full-Time</label><br>
+
+      <input type="radio" id="part" name="availability">
+      <label for="part">Part-Time</label>
+    </fieldset>
+
+    <label for="message">Message</label>
+    <textarea id="message" rows="4" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+</body>
+</html>
