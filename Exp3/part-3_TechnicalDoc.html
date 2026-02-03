@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technical Documentation</title>
+<style>
+body{margin:0;font-family:'Segoe UI',sans-serif;display:flex;background:#f0f2f5;color:#222}
+#navbar{position:fixed;left:0;top:0;width:220px;height:100vh;padding:20px;background:#1b1f3b;color:#fff;overflow:auto}
+#navbar header{font-size:22px;margin-bottom:20px;text-transform:uppercase;letter-spacing:1px}#navbar a{display:block;color:#fdb347;
+    text-decoration:none;margin:6px 0;padding:4px;border-radius:4px;transition:0.2s}#navbar a:hover{background:#fdb347;color:#1b1f3b}
+    #main-doc{margin-left:240px;padding:30px;flex:1}section{margin-bottom:40px;background:#fff;padding:20px;border-radius:12px;
+        box-shadow:0 4px 15px rgba(0,0,0,0.1)}section header{font-size:24px;margin-bottom:12px;color:#0a0a23}p{margin:10px 0;
+            line-height:1.6}code{background:#f4f4f4;padding:2px 6px;border-radius:5px;font-family:monospace;color:#c7254e}
+            ul{margin:10px 0 10px 20px}li{margin:5px 0}@media(max-width:768px){#navbar{position:relative;width:100%;height:auto}
+            #main-doc{margin-left:0;padding:20px}}
+</style>
+</head>
+<body>
+<nav id="navbar">
+<header>JS Docs</header>
+<a class="nav-link" href="#Introduction">Introduction</a>
+<a class="nav-link" href="#Variables_and_Constants">Variables and Constants</a>
+<a class="nav-link" href="#Functions">Functions</a>
+<a class="nav-link" href="#Loops">Loops</a>
+<a class="nav-link" href="#Objects">Objects</a>
+</nav>
+<main id="main-doc">
+<section class="main-section" id="Introduction">
+<header>Introduction</header>
+<p>JavaScript is a versatile programming language used for web development.</p>
+<p>It allows dynamic interaction on webpages and supports multiple paradigms.</p>
+<p>It runs in browsers and on servers using Node.js.</p>
+<code>console.log("Hello World");</code>
+<p>JS supports variables, functions, objects, loops, and more.</p>
+<ul><li>Easy to learn</li><li>Dynamic typing</li><li>Event-driven</li></ul>
+</section>
+<section class="main-section" id="Variables_and_Constants">
+<header>Variables and Constants</header>
+<p>Variables store data values using <code>var</code>, <code>let</code>, or <code>const</code>.</p>
+<p>Use <code>const</code> for values that should not change.</p>
+<code>let name = "Alice";</code>
+<code>const pi = 3.14;</code>
+<ul><li>var: function scoped</li><li>let: block scoped</li><li>const: block scoped, read-only</li></ul>
+</section>
+<section class="main-section" id="Functions">
+<header>Functions</header>
+<p>Functions encapsulate reusable code blocks.</p>
+<p>They can accept parameters and return values.</p>
+<code>function sum(a,b){return a+b;}</code>
+<code>const multiply=(x,y)=>x*y;</code>
+<ul><li>Function declaration</li><li>Function expression</li><li>Arrow functions</li></ul>
+</section>
+<section class="main-section" id="Loops">
+<header>Loops</header>
+<p>Loops are used to execute code multiple times.</p>
+<p>JavaScript supports <code>for</code>, <code>while</code>, and <code>do...while</code> loops.</p>
+<code>for(let i=0;i<5;i++){console.log(i);}</code>
+<code>while(condition){...}</code>
+<ul><li>for loop</li><li>while loop</li><li>do while loop</li></ul>
+</section>
+<section class="main-section" id="Objects">
+<header>Objects</header>
+<p>Objects store key-value pairs of data.</p>
+<p>They are fundamental for structuring complex data.</p>
+<code>let person={name:"Bob",age:25};</code>
+<p>Access properties with dot or bracket notation.</p>
+<code>console.log(person.name);</code>
+<ul><li>Dynamic properties</li><li>Nested objects</li><li>Methods</li></ul>
+</section>
+</main>
+</body>
+</html>
