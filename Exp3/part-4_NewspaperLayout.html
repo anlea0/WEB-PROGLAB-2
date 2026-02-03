@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Daily Grid</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #1f1f1f;
+      --muted: #666;
+      --paper: #ffffff;
+      --wash: #f4f4f4;
+      --rule: #d9d9d9;
+      --accent: #7a1f2b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Source Serif 4", Georgia, serif;
+      background: var(--wash);
+      color: var(--ink);
+      padding: 24px;
+    }
+
+    /* --- Layout --- */
+    .newspaper-layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: clamp(20px, 3vw, 36px);
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(12, 1fr);
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+
+    /* --- Masthead --- */
+    .title {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding-bottom: 18px;
+      border-bottom: 5px double var(--ink);
+    }
+
+    .title h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.6rem, 5vw, 3.6rem);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .title::after {
+      content: "Established 2026 · All the Layout That Fits";
+      display: block;
+      margin-top: 6px;
+      font-size: .8rem;
+      letter-spacing: .15em;
+      color: var(--muted);
+    }
+
+    /* --- Feature Article --- */
+    .feature-article {
+      grid-column: 1 / 8;
+      border-top: 4px solid var(--accent);
+      padding-top: 16px;
+    }
+
+    .feature-article h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.8rem, 3vw, 2.3rem);
+      margin-bottom: 12px;
+    }
+
+    .feature-article p {
+      line-height: 1.8;
+      font-size: 1.05rem;
+      text-align: justify;
+    }
+
+    .feature-article p::first-letter {
+      float: left;
+      font-family: "Playfair Display", serif;
+      font-size: 3.6rem;
+      line-height: 1;
+      padding-right: 8px;
+      color: var(--accent);
+    }
+
+    /* --- Cover Image --- */
+    .cover-image {
+      grid-column: 8 / -1;
+      align-self: start;
+    }
+
+    .cover-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid var(--rule);
+    }
+
+    .cover-image figcaption {
+      font-size: .8rem;
+      color: var(--muted);
+      margin-top: 6px;
+      text-align: center;
+    }
+
+    /* --- Secondary Article --- */
+    .secondary-article {
+      grid-column: 1 / 8;
+      border-top: 1px solid var(--rule);
+      padding-top: 14px;
+    }
+
+    .secondary-article h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+
+    .secondary-article p {
+      line-height: 1.7;
+      color: #333;
+    }
+
+    /* --- Small Columns --- */
+    .small {
+      grid-column: span 4;
+      border-top: 3px solid var(--ink);
+      padding-top: 10px;
+    }
+
+    .small h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+    }
+
+    .small p {
+      font-size: .95rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* --- Footer Rule --- */
+    .newspaper-layout::after {
+      content: "";
+      grid-column: 1 / -1;
+      border-top: 2px solid var(--ink);
+      margin-top: 10px;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 900px) {
+      .feature-article,
+      .secondary-article,
+      .cover-image {
+        grid-column: 1 / -1;
+      }
+
+      .small { grid-column: 1 / -1; }
+    }
+
+    /* --- Print Friendly --- */
+    @media print {
+      body { background: white; padding: 0; }
+      .newspaper-layout { box-shadow: none; }
+      a { color: black; text-decoration: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="newspaper-layout">
+
+    <header class="title">
+      <h1>The Daily Grid</h1>
+    </header>
+
+    <article class="feature-article">
+      <h2>Breaking: CSS Grid Revolutionizes Web Design</h2>
+      <p>
+        In an unprecedented development in the world of web development, CSS Grid has transformed how designers think about layout. This two-dimensional system replaces brittle hacks with clarity and intent, unlocking layouts once reserved for print. Experts agree: Grid is no longer the future — it is the standard.
+      </p>
+    </article>
+
+    <figure class="cover-image">
+      <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&h=800&fit=crop" alt="Classic newspaper print press" />
+      <figcaption>Print inspiration meets modern CSS</figcaption>
+    </figure>
+
+    <article class="secondary-article">
+      <h2>Local Community Embraces Digital Transformation</h2>
+      <p>
+        Community workshops are drawing record crowds as citizens explore modern layout tools. By blending traditional design sensibilities with cutting-edge CSS, participants are rediscovering the craft of storytelling — one grid at a time.
+      </p>
+    </article>
+
+    <article class="small">
+      <h3>Tech Tips</h3>
+      <p>Use grid-template-columns with intent. Think like an editor, not a browser.</p>
+    </article>
+
+    <article class="small">
+      <h3>Weekly Workshop</h3>
+      <p>Thursday nights: modern CSS layouts, zero frameworks, pure control.</p>
+    </article>
+
+    <article class="small">
+      <h3>Developer Spotlight</h3>
+      <p>Sarah Chen recreates historic newspapers using nothing but CSS Grid.</p>
+    </article>
+
+  </main>
+</body>
+</html>
