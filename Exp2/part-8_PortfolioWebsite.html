@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Portfolio</title>
+<style>
+  :root {
+    --primary-color: #004d40;    --secondary-color: #26a69a;    --light-bg: #f4f4f4;    --white: #ffffff;
+  }
+  body {
+    margin: 0;    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    scroll-behavior: smooth;    line-height: 1.6;    color: #333;
+  }
+
+  /* --- Navigation --- */
+  #navbar {
+    position: fixed;    top: 0;    width: 100%;    background: var(--primary-color);    color: var(--white);    display: flex;    
+    justify-content: space-between;    padding: 15px 0;    z-index: 1000;    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .nav-container {
+    width: 90%;    max-width: 1200px;    margin: 0 auto;    display: flex;    justify-content: space-between;    align-items: center;
+  }
+
+  #navbar a {
+    color: var(--white);    text-decoration: none;    margin: 0 15px;    font-weight: 500;    transition: color 0.3s;
+  }
+
+  #navbar a:hover {
+    color: #80cbc4;
+  }
+
+  /* --- Welcome Section --- */
+  #welcome-section {
+    height: 100vh;    background: linear-gradient(135deg, var(--secondary-color), #80cbc4);    display: flex;    flex-direction: column;
+    justify-content: center;    align-items: center;    color: var(--white);    text-align: center;    padding: 0 20px;
+  }
+
+  #welcome-section h1 { font-size: 3.5em; margin: 0; }
+  #welcome-section p { font-size: 1.2em; margin-top: 10px; opacity: 0.9; }
+
+  /* --- Sections General --- */
+  section { padding: 100px 20px; max-width: 1200px; margin: 0 auto; }
+  h2 { text-align: center; color: var(--primary-color); font-size: 2.5em; margin-bottom: 40px; }
+
+  /* --- About Section --- */
+  #about { background: var(--white); }
+  .about-content {
+    display: flex;    align-items: center;    gap: 40px;    flex-wrap: wrap;
+  }
+  .about-text { flex: 2; min-width: 300px; }
+  .about-image { 
+    flex: 1;     min-width: 250px;     text-align: center;
+  }
+  .about-image img {
+    width: 250px;    height: 250px;    border-radius: 50%;    object-fit: cover;    border: 5px solid var(--secondary-color);
+  }
+
+  /* --- Skills Section --- */
+  #skills { background: var(--light-bg); text-align: center; }
+  .skills-container {
+    display: flex;    flex-wrap: wrap;    justify-content: center;    gap: 15px;
+  }
+  .skill-badge {
+    background: var(--primary-color);    color: white;    padding: 10px 25px;    border-radius: 50px;    font-weight: bold;
+    transition: transform 0.3s;
+  }
+  .skill-badge:hover { transform: scale(1.1); }
+
+  /* --- Project Section --- */
+  #projects { background: var(--white); text-align: center; }
+  .projects-grid {
+    display: grid;    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));    gap: 30px;
+  }
+  .project-tile {
+    border: 1px solid #ddd;    border-radius: 12px;    overflow: hidden;    background: var(--white);    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .project-tile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  }
+  .project-tile img { width: 100%; height: 200px; object-fit: cover; }
+  .project-tile a {
+    display: block;    padding: 20px;    color: var(--primary-color);    font-weight: bold;    text-decoration: none;    font-size: 1.2em;
+  }
+
+  /* --- Contact Section --- */
+  #contact {
+    background: var(--primary-color);    color: white;    text-align: center;    padding: 80px 20px;
+  }
+  #contact h2 { color: white; }
+  .contact-links { margin-top: 30px; }
+  .contact-links a {
+    color: white;    margin: 0 20px;    font-size: 1.5em;    text-decoration: none;    border-bottom: 2px solid transparent;    
+    transition: border 0.3s;
+  }
+  .contact-links a:hover { border-bottom: 2px solid var(--secondary-color); }
+
+  footer {
+    text-align: center;    padding: 20px;    background: #00332b;    color: #80cbc4;    font-size: 0.9em;
+  }
+
+  /* --- Mobile Responsiveness --- */
+  @media(max-width: 768px) {
+    #welcome-section h1 { font-size: 2.5em; }
+    .nav-container { flex-direction: column; }
+    #navbar { padding: 10px; }
+    .about-content { text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-container">
+    <div style="font-weight: bold; font-size: 1.2em;">Devfolio</div>
+    <div>
+      <a href="#welcome-section">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section id="welcome-section">
+  <h1>Hi, I'm Anlea</h1>
+  <p>AIML Engineer & Creative Problem Solver</p>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about-content">
+    <div class="about-image">
+      <img src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fwp-content%2Fblogs.dir%2F6%2Ffiles%2F2025%2F04%2F04%2Fopen-ai-studio-ghibli-sustainability-ai-generative-images-0.png?w=960&cbr=1&q=90&format=png&fit=max" 
+      alt="Profile Picture">
+    </div>
+    <div class="about-text">
+      <p>I am a passionate developer with a focus on creating clean, user-friendly applications. With a background in AI and Machine Learning, I enjoy tackling complex logic and turning it into simple, beautiful code.</p>
+      <p>When I'm not coding, you can find me painting, blogging or learning about the latest trends in web technology.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="skills-container">
+    <div class="skill-badge">HTML5</div>
+    <div class="skill-badge">CSS3</div>
+    <div class="skill-badge">JavaScript</div>
+    <div class="skill-badge">React</div>
+    <div class="skill-badge">Node.js</div>
+    <div class="skill-badge">Python</div>
+    <div class="skill-badge">Git & GitHub</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>My Projects</h2>
+  <div class="projects-grid">
+    <div class="project-tile">
+      <img src="https://img.freepik.com/free-vector/fashion-shopping-app-pack_23-2148654434.jpg?semt=ais_hybrid&w=740&q=80" alt="Project 1">
+      <a href="#" target="_blank">E-Commerce Platform</a>
+    </div>
+    <div class="project-tile">
+      <img src="https://s.tmimgcdn.com/scr/1200x750/300100/wecast-weather-forecast-website-with-react-nextjs-tailwindcss_300109-original.jpg" 
+      alt="Project 2">
+      <a href="#" target="_blank">Weather Dashboard</a>
+    </div>
+    <div class="project-tile">
+      <img src="https://cdn.dribbble.com/userupload/15082777/file/original-70822f62753423143f4b3616a155d7fc.png?format=webp&resize=400x300&vertical=center" 
+      alt="Project 3">
+      <a href="#" target="_blank">Task Manager App</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Let's Connect</h2>
+  <p>I'm currently open to new opportunities and collaborations.</p>
+  <div class="contact-links">
+    <a href="mailto:your@email.com">Email</a>
+    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Anlea ©. All rights reserved.
+</footer>
+
+</body>
+</html>

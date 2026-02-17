@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Colored Boxes</title>
+<style>
+body{background:#f4f4f4}
+
+.color-grid{
+  display:flex;gap:15px;
+  justify-content:center;
+  margin-top:100px
+}
+.color-box{
+  width:80px;height:80px
+}
+.color1{background:#ff6f61}              /* hex */
+.color2{background:rgb(66,135,245)}      /* rgb */
+.color3{background:teal}                 /* named */
+.color4{background:hsl(120,60%,50%)}     /* hsl */
+.color5{background:#9c27b0}               /* any color */
+</style>
+</head>
+
+<body>
+<div class="color-grid">
+  <div class="color-box color1"></div>
+  <div class="color-box color2"></div>
+  <div class="color-box color3"></div>
+  <div class="color-box color4"></div>
+  <div class="color-box color5"></div>
+</div>
+</body>
+</html>

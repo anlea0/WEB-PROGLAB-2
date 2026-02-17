@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Stylized To-Do List</title>
+<style>
+body{
+  background:#f2dede;  font-family:Arial,sans-serif}
+.card{
+  width:320px;background:#fff;
+  margin:100px auto;padding:20px;
+  border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.15)
+}
+.todo-list{list-style:none;padding:0}
+.sub-item{list-style:circle;margin-left:25px}
+
+a{text-decoration:none;color:#1a73e8}
+a:visited{color:#6a1b9a}
+a:hover{color:#e53935}
+a:active{color:#2e7d32}
+a:focus{outline:2px solid orange}
+</style>
+</head>
+
+<body>
+<div class="card">
+  <ul class="todo-list">
+    <li>
+      <input type="checkbox" id="t1">
+      <label for="t1">Finish HTML lab</label>
+      <ul class="sub-item">
+        <li><a class="sub-item-link" href="https://developer.mozilla.org" target="_blank">HTML Docs</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <input type="checkbox" id="t2">
+      <label for="t2">Style with CSS</label>
+      <ul class="sub-item">
+        <li><a class="sub-item-link" href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <input type="checkbox" id="t3">
+      <label for="t3">Practice JavaScript</label>
+      <ul class="sub-item">
+        <li><a class="sub-item-link" href="https://javascript.info" target="_blank">JS Guide</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <input type="checkbox" id="t4">
+      <label for="t4">Upload to GitHub</label>
+      <ul class="sub-item">
+        <li><a class="sub-item-link" href="https://github.com" target="_blank">GitHub Repo</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+</body>
+</html>

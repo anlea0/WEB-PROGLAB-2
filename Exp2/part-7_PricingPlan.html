@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pricing Plans</title>
+<style>
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;padding:40px;background-color:#f0f2f5;color:#333;}
+h1{text-align:center;margin-bottom:50px;font-weight:700;color:#1a202c;}
+.pricing-container{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;align-items:stretch;max-width:1000px;margin:0 auto;}
+.pricing-card{display:flex;flex-direction:column;justify-content:space-between;flex:0 0 220px;padding:30px;background-color:white;
+    text-align:center;min-height:250px;border-radius:15px;box-shadow:0 4px 15px rgba(0,0,0,0.05);
+    transition:transform 0.3s ease,box-shadow 0.3s ease;border:none;}
+.pricing-card:hover{transform:translateY(-5px);box-shadow:0 12px 20px rgba(0,0,0,0.1);}
+.basic-plan{order:0;border-top:5px solid #a0aec0;}
+.pro-plan{order:1;flex-grow:2;border-top:5px solid #4299e1;transform:scale(1.05);z-index:1;box-shadow:0 10px 25px rgba(66,153,225,0.2);}
+.pro-plan:hover{transform:scale(1.07) translateY(-5px);}
+.premium-plan{order:2;border-top:5px solid #805ad5;}
+h2{margin:0;font-size:1.5rem;color:#2d3748;letter-spacing:1px;}
+p{font-size:2rem;font-weight:800;margin:20px 0;color:#1a202c;}
+p span{font-size:0.9rem;font-weight:400;color:#718096;}
+.btn{margin-top:20px;padding:12px;background:#4299e1;color:white;text-decoration:none;border-radius:8px;font-weight:600;font-size:0.9rem;}
+.basic-plan .btn{background:#718096;}
+.premium-plan .btn{background:#805ad5;}
+</style>
+</head>
+<body>
+    <h1>Pricing Plans</h1>
+    <div class="pricing-container">
+    <div class="pricing-card basic-plan">
+    <h2>Basic</h2>
+    <p>$9<span>/month</span></p>
+    <div style="font-size:0.85rem;color:#718096;">Standard Features<br>Email Support</div>
+    <a href="#" class="btn">Start Basic</a>
+    </div>
+    <div class="pricing-card pro-plan">
+    <div style="background:#4299e1;color:white;font-size:0.7rem;padding:4px 0;border-radius:20px;width:100px;
+    margin:0 auto 15px;text-transform:uppercase;font-weight:bold;">Most Popular</div>
+    <h2>Pro</h2>
+    <p>$19<span>/month</span></p>
+    <div style="font-size:0.85rem;color:#718096;">Priority Support<br>Advanced Analytics<br>Team Access</div>
+    <a href="#" class="btn">Go Pro</a>
+    </div>
+    <div class="pricing-card premium-plan">
+    <h2>Premium</h2>
+    <p>$29<span>/month</span></p>
+    <div style="font-size:0.85rem;color:#718096;">24/7 Phone Support<br>Unlimited Storage<br>Custom Branding</div>
+    <a href="#" class="btn">Get Premium</a>
+    </div>
+    </div>
+</body>
+</html>
