@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Input Handling</title> 
+</head> 
+<body> 
+ 
+    <input type="text" id="userInput" placeholder="Enter text"> 
+    <button onclick="displayText()">Display</button> 
+ 
+    <p id="output"></p> 
+ 
+    <script> 
+        function displayText() { 
+            const text = document.getElementById("userInput").value; 
+            document.getElementById("output").innerHTML = text; 
+        } 
+    </script> 
+ 
+</body> 
+</html> 

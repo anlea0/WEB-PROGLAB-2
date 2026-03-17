@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recitation Q.6</title>
+</head>
+ <style>
+        .container{
+            display: flex;
+            flex-direction: column;   /* stack items vertically */
+            align-items: center;      /* center horizontally */
+            justify-content: center;  /* center vertically */
+            height: 25vh;            /*full viewport height */
+            background: linear-gradient(rgba(130, 85, 133, 0.521), rgba(137, 132, 228, 0.607));
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 50px auto;
+            border: solid rgba(128, 128, 128, 0.49) 2px;
+            box-shadow: 0 4px 12px rgba(100, 44, 44, 0.2); 
+
+        }
+        #username{
+            max-width: 400px;
+            height: 30px;
+            width: 300px;
+            margin: 10px;
+            /* box-shadow: 0 4px 12px rgba(0,0,0,0.2);  */
+            text-align: center;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.801);
+            border: solid white 2px;
+            color: aliceblue;
+        }
+        button{
+            max-width: 200px;
+            width: 150px;
+            margin: 10px;
+            /* box-shadow: 0 4px 12px rgba(0,0,0,0.2);  */
+            height: 30px;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.801);
+            color: azure;
+            border: solid white 2px;
+            
+        }
+        p{
+            font-weight: bold;
+            text-align: center;
+        }
+
+    </style>
+<body>
+    <div class="container">
+        <input type="text" id="username" placeholder="Enter username">
+        <button onclick="saveUser()">Save</button>
+        <p id="displayUser"></p>
+
+    </div>
+
+
+    <script>
+        function saveUser() {
+            let user = document.getElementById("username").value;
+            localStorage.setItem("username", user);
+        }
+
+        window.onload = function() {
+        let savedUser = localStorage.getItem("username");
+        if (savedUser) {
+            document.getElementById("displayUser").innerText =
+            "Stored Username: " + savedUser;
+        }
+        }
+</script>
+
+</body>
+</html>

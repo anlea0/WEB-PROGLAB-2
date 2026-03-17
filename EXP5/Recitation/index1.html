@@ -1,0 +1,19 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Accessing DOM Elements</title> 
+</head> 
+<body> 
+ 
+    <p id="para">This is the original paragraph.</p> 
+    <button onclick="changeText()">Change Text</button> 
+ 
+    <script> 
+        function changeText() { 
+            document.getElementById("para").innerHTML = 
+            "The paragraph text has been changed using JavaScript."; 
+        } 
+    </script> 
+ 
+</body> 
+</html> 

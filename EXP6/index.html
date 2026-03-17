@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment 6 - Form Validation & Dark Mode</title>
+
+   <link rel="stylesheet" href="style.css">
+
+<body>
+
+<div class="container">
+    <h2>Contact Form</h2>
+
+    <!-- Email -->
+    <label>Email:</label>
+    <input type="text" id="email">
+    <p id="emailError" class="error"></p>
+
+    <!-- Phone -->
+    <label>Phone Number:</label>
+    <input type="text" id="phone">
+    <p id="phoneError" class="error"></p>
+
+    <!-- Password -->
+    <label>Password:</label>
+    <input type="password" id="password">
+    <p id="passError" class="error"></p>
+
+    <button onclick="validateForm()">Submit</button>
+
+    <p id="successMsg" class="success"></p>
+
+    <hr>
+
+    <button onclick="toggleTheme()">Toggle Dark Mode</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

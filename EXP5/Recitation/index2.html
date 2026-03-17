@@ -1,0 +1,19 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Create Elements</title> 
+</head> 
+<body> 
+ 
+    <button onclick="addParagraph()">Add Paragraph</button> 
+ 
+    <script> 
+        function addParagraph() { 
+            const paragraph = document.createElement("p"); 
+            paragraph.innerHTML = "This paragraph is created dynamically."; 
+            document.body.appendChild(paragraph); 
+        } 
+    </script> 
+ 
+</body> 
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>To-Do Logic</title> 
+</head> 
+<body> 
+ 
+    <input type="text" id="taskInput" placeholder="Enter task"> 
+    <button onclick="addTask()">Add Task</button> 
+ 
+    <ul id="taskList"></ul> 
+ 
+    <script> 
+        function addTask() { 
+            const task = document.getElementById("taskInput").value; 
+ 
+            if (task !== "") { 
+                const listItem = document.createElement("li"); 
+                listItem.innerHTML = task; 
+                document.getElementById("taskList").appendChild(listItem); 
+                document.getElementById("taskInput").value = ""; 
+            } 
+        } 
+    </script> 
+ 
+</body> 
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation (q.3)</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;   /* stack items vertically */
+            align-items: center;      /* center horizontally */
+            justify-content: center;  /* center vertically */
+            height: 25vh;            /*full viewport height */
+            background: linear-gradient(rgba(130, 85, 133, 0.521), rgba(137, 132, 228, 0.607));
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 50px auto;
+            border: solid rgba(128, 128, 128, 0.49) 2px;
+            box-shadow: 0 4px 12px rgba(100, 44, 44, 0.2); 
+
+        }
+        #email{
+            max-width: 400px;
+            height: 30px;
+            width: 300px;
+            margin: 10px;
+            /* box-shadow: 0 4px 12px rgba(0,0,0,0.2);  */
+            text-align: center;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.801);
+            border: solid white 2px;
+            color: aliceblue;
+        }
+        button{
+            max-width: 100px;
+            width: 100px;
+            margin: 10px;
+            /* box-shadow: 0 4px 12px rgba(0,0,0,0.2);  */
+            height: 30px;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.801);
+            color: azure;
+            border: solid white 2px;
+            
+        }
+        p{
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="email" id="email" placeholder="Enter email">
+        <button onclick="checkEmail()">Check Email</button>
+        <p id="emailMsg"></p>
+    </div>
+   
+    <script>
+        function checkEmail() {
+            let email = document.getElementById("email").value;
+
+            if (email.includes("@")) {
+                document.getElementById("emailMsg").innerText = "Valid Email";
+            } else {
+                document.getElementById("emailMsg").innerText = "Invalid Email";
+            }
+        }
+    </script>
+
+
+</body>
+</html>

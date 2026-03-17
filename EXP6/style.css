@@ -1,0 +1,52 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        input {
+            width: 97%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 8px;
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        .success {
+            color: green;
+        }
+
+        /* Dark Mode */
+        .dark {
+            background-color: #011501;
+            color: rgb(239, 224, 172);
+        }
+
+        .dark input {
+            background-color: #333;
+            color: white;
+            border: 1px solid #555;
+        }
+    

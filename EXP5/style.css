@@ -1,0 +1,87 @@
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main container */
+.container {
+    background-color: #ffffff;
+    padding: 25px;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
+.container h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Input field */
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Add Task button */
+button {
+    margin-top: 10px;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Task list */
+ul {
+    margin-top: 15px;
+    list-style-type: none;
+}
+
+/* Task item */
+li {
+    background-color: #f8f9fa;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Remove button */
+li button {
+    width: auto;
+    padding: 4px 8px;
+    font-size: 12px;
+    background-color: #dc3545;
+}
+
+li button:hover {
+    background-color: #b52a37;
+}
